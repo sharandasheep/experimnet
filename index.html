@@ -180,7 +180,6 @@ function closeNav() {
 		    center: [-96, 36], // starting position [lng, lat]
 		    zoom: 3.6 // starting zoom
 		});
-		map.addControl(new mapboxgl.NavigationControl());
 		map.on('load', function () {
 		    // Add a layer showing the places.
 		    map.addLayer({
@@ -193,7 +192,7 @@ function closeNav() {
 		                "features": [{
 		                    "type": "Feature",
 		                    "properties": {
-		                        "description": "<p id=\"strong\">Empress Ci Xi</p><p><a href=\"china.html\" target=\"_blank\" title=\"Opens in a new window\">Info</a></p>",
+		                        "description": "<p id=\"strong\">Denver</p>",
 		                        "icon": "marker"
 		                    },
 		                    "geometry": {
