@@ -171,11 +171,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+	     </script>
+	     <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmx1ZWRnY2hlZXNlIiwiYSI6ImNqcDFyeTQ2ZDFid2wzb3A0YjBkcGx1d2gifQ.rv12RKMP5T_yFaYVJt_5Qg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
-    center: [38.97, -94.68],
+    center: [38, -94],
     zoom: 4
 });
 map.addControl(new mapboxgl.NavigationControl());
