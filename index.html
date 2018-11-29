@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
-
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+	    
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
@@ -169,6 +171,11 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmx1ZWRnY2hlZXNlIiwiYSI6ImNqcDFyeTQ2ZDFid2wzb3A0YjBkcGx1d2gifQ.rv12RKMP5T_yFaYVJt_5Qg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v10'
+});
 </script>
 </body>
 </html>
