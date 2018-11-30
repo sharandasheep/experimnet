@@ -1,21 +1,20 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+	    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/256-256-3d3b3c4f9781232ee75cfcb48acc71f6.png" type="image/gif" sizes="16x16">
-<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
-	    
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
     margin:0;
     height: 100%;
     line-height: 1.8;
-    padding:0;
 }
 .w3-bar .w3-button {
     padding: 16px;
@@ -39,16 +38,17 @@ body, html {
     color: #818181;
     display: block;
     transition: 0.3s;
+    font-family: 'Audiowide', cursive;
 }
 .sidenav a:hover {
     color: #f1f1f1;
+    font-family: 'Audiowide', cursive;
 }
 .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
-    padding-bottom: 10px
     margin-left: 50px;
 }
 .sidenav1 {
@@ -68,12 +68,15 @@ body, html {
     font-size: 25px;
     color: black;
     display: block;
+    font-family: 'Audiowide', cursive;
 }
 .sidenav1 a:hover {
     color: #f1f1f1;
+    font-family: 'Audiowide', cursive;
 }
     .container  {
-    background: linear-gradient(white, lightblue);
+    background: linear-gradient(black, lightblue);
+    color: white;
     }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -140,10 +143,9 @@ body, html {
 	.leftphase {
 		padding-left: 10px;
 	}
-	#map {position:absolute; top:0; bottom:0; width:0;}
 </style>
      
-    <title>Locations</title>
+    <title>Inside the Rooms</title>
     </head>
      <body>
 <div class="sidenav1">
@@ -161,9 +163,14 @@ body, html {
     </ul>
   </nav>
 </div>
-<div style"margin-left:70px;">
-<div id='map' style='width: 100%; height: 100%;'></div>
-</div>
+	<div style="margin-left:50px; height:100%; width:100%" class="container">
+		<h1 style="margin-left:75px">Inside Some of the Rooms</h1>
+		<ul>
+			<li>Race Against Time</li>
+			<li>Wizards</li>
+			<li>Escape from an Egyptiam Pyramid</li>
+		</ul>
+	</div>
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
@@ -171,162 +178,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-	     </script>
-	     <script>
-		mapboxgl.accessToken = 'pk.eyJ1IjoiaGljb29sa2lkMTIzMTIzMTIzIiwiYSI6ImNqbXBvdDc3aTB6NWozcXFrNXF3ZHdlcnMifQ.QsjiXm8MHW9c5x5xC4RMsg';
-		var map = new mapboxgl.Map({
-		    container: 'map', // container id
-		    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
-		    center: [-96, 36], // starting position [lng, lat]
-		    zoom: 3.6 // starting zoom
-		});
-		map.on('load', function () {
-		    // Add a layer showing the places.
-		    map.addLayer({
-		        "id": "places",
-		        "type": "symbol",
-		        "source": {
-		            "type": "geojson",
-		            "data": {
-		                "type": "FeatureCollection",
-		                "features": [{
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Denver</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-104, 40]
-		                    }
-		                }, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Washington D.C.</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-77.04, 38.907]
-		                    }
-		                }, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Kansas City</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-94.5, 38.45]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Toronto</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-79.6, 44]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Mexico City</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-97, 19.75]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">New York City</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [-74, 41.15]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Seattle</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [77, 160.876516]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">San Francisco</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [77, 160.876516]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Orlando</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [77, 160.876516]
-		                    }
-				}, {
-		                    "type": "Feature",
-		                    "properties": {
-		                        "description": "<p id=\"strong\">Chicago</p>",
-		                        "icon": "marker"
-		                    },
-		                    "geometry": {
-		                        "type": "Point",
-		                        "coordinates": [77, 160.876516]
-		                    }
-		                }]
-		            }
-		        },
-		        "layout": {
-		            "icon-image": "{icon}-15",
-		            "icon-allow-overlap": true
-		        }
-		    });
-
-		    // When a click event occurs on a feature in the places layer, open a popup at the
-		    // location of the feature, with description HTML from its properties.
-		    map.on('click', 'places', function (e) {
-		        var coordinates = e.features[0].geometry.coordinates.slice();
-		        var description = e.features[0].properties.description;
-
-		        // Ensure that if the map is zoomed out such that multiple
-		        // copies of the feature are visible, the popup appears
-		        // over the copy being pointed to.
-		        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-		            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-		        }
-
-		        new mapboxgl.Popup()
-		            .setLngLat(coordinates)
-		            .setHTML(description)
-		            .addTo(map);
-		    });
-
-		    // Change the cursor to a pointer when the mouse is over the places layer.
-		    map.on('mouseenter', 'places', function () {
-		        map.getCanvas().style.cursor = 'pointer';
-		    });
-
-		    // Change it back to a pointer when it leaves.
-		    map.on('mouseleave', 'places', function () {
-		        map.getCanvas().style.cursor = '';
-		    });
-		});
-	</script>
+</script>
 </body>
 </html>
